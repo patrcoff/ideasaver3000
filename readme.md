@@ -1,3 +1,9 @@
+*This project is in pre-alpha and part of my 2023 new years Resolution to 
+create an original project each month throughout the year. The main purpose
+is for my self-education. At this stage, this readme provides an high level
+description of the intended product and some context around its design.
+
+
 I feel like my brain works differently from most people.
 
 I do know that I have Aphantasia - a difference in neurology which means I
