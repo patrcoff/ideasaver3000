@@ -111,7 +111,7 @@ class Idea(stuff):
         self.archived        #not deleted, but not to be worked on
                              #currently
         self.priority        #a metric of priority over other objects, details tbc
-        
+        self.frontend_id     #id of front end which created object
 Note, different front end apps will use combinations of the above attributes/
 fields to derive uniqueness of categories and classification as well as build
 connections between objects.
