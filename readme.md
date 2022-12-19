@@ -54,7 +54,7 @@ of varying contextual meanings. In this way I hope to be able to build a sort
 of 'web' of my mind, rather than a strictly vertical hyerarchical structure
 in classifying and organising my thoughts. I have no idea if any of this 
 makes sense to anyone else, but if you're still with me, I shall dig a little
-into how I (at the very early stages) plan to structe this technilogically
+into how I (at the very early stages) plan to structure this technilogically
 speaking.
 
 First though, I want to outline some of my main intended use cases for this,
@@ -73,6 +73,7 @@ for further consideration/review. This would likely be a simple 5 minute a
 day sort of application, where user input deadlines/reminder dates, quality
 of connections to other ideas/notes/projects (both high linkage for inspiring
 development of ideas, and low linkage for pruning ideas from the system)
+determine the daily presented idea objects.
 
 I also plan a system of dependency between ideas, where one 'idea object'
 can depend on the completion of another, be that a project, a to-do item,
@@ -112,6 +113,10 @@ class Idea(stuff):
                              #currently
         self.priority        #a metric of priority over other objects, details tbc
         self.frontend_id     #id of front end which created object
+
 Note, different front end apps will use combinations of the above attributes/
 fields to derive uniqueness of categories and classification as well as build
-connections between objects.
+connections between objects. The frontend_id will be used to help filter compatible
+idea objects between front-end applications, where some apps will create objects
+not usable by others, while others will create inter-operable objects. There will
+Be a default value for a 'genetic' object not tied to a specific frontend app.
