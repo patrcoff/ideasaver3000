@@ -1,3 +1,6 @@
+from datetime import datetime
+from config import db, ma
+
 dummy_data = {
     'id': 1,
     'title':'Title words here',
@@ -17,6 +20,17 @@ dummy_data = {
     'frontend_id':'unique id of frontend app which created the object'
 
 }
+
+class Thoughtlet(db.Model):
+    __tablename__ = 'thoughtlet'
+    id = db.Column(db.Integer,primary_key=True)
+    #...
+    links = db.relationship(
+        Link,#need to create this as well
+        backref='thoughtlet',
+        cascade='all, delete, delete-orphan',
+        ordr_by='desc(Link.timestamp)'
+    )
 
 def main():
     pass
